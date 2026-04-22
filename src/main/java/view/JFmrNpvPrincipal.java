@@ -33,20 +33,18 @@ public class JFmrNpvPrincipal extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu1.setText("Cadastro");
 
-        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.setText("Usuarios");
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setText("jMenuItem2");
+        jMenuItem2.setText("Clientes");
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setText("jMenuItem3");
@@ -57,24 +55,15 @@ public class JFmrNpvPrincipal extends javax.swing.JFrame {
 
         jMenuItem5.setText("jMenuItem5");
         jMenu1.add(jMenuItem5);
+        jMenu1.add(jSeparator1);
+
+        jMenuItem6.setText("Sair");
+        jMenu1.add(jMenuItem6);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Movimentos");
-
-        jMenuItem7.setText("jMenuItem7");
-        jMenu2.add(jMenuItem7);
-
-        jMenuItem9.setText("jMenuItem9");
-        jMenu2.add(jMenuItem9);
-
-        jMenuItem8.setText("jMenuItem8");
-        jMenu2.add(jMenuItem8);
-
-        jMenuItem6.setText("jMenuItem6");
-        jMenu2.add(jMenuItem6);
-
-        jMenuBar1.add(jMenu2);
+        jMenu4.setText("Movimentos");
+        jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
 
@@ -86,7 +75,7 @@ public class JFmrNpvPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGap(0, 254, Short.MAX_VALUE)
         );
 
         pack();
@@ -129,7 +118,7 @@ public class JFmrNpvPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -137,8 +126,6 @@ public class JFmrNpvPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
