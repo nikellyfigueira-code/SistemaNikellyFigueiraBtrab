@@ -19,6 +19,7 @@ public class JDlgNpfUsuarios extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro de Usuários.");
         setLocationRelativeTo(null);
+       
 
        
 
@@ -349,8 +350,9 @@ public class JDlgNpfUsuarios extends javax.swing.JDialog {
                 public void windowClosing(java.awt.event.WindowEvent e) {
                     System.exit(0);
                 }
+                
             });
-            dialog.setVisible(true);
+          
         });
     }
 

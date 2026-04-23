@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jFmtnpfMarca" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTxtnpfCodigo" alignment="0" pref="139" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jLblnpfMarca" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblnpfGenero" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLblnpfPrecodeVenda" pref="199" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLblnpfCategoria" max="32767" attributes="0"/>
+                          <Component id="jTxtnpfNome" pref="243" max="32767" attributes="0"/>
+                          <Component id="jTxtnpfCategoria" alignment="1" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jLblnpfQuantidadeEstoque" alignment="0" pref="388" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jLblnpfCodigo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                      <Component id="jLblnpfNome" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jTxtnpfPrecodeVenda" alignment="0" pref="388" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jTxtnpfGenero" min="-2" pref="139" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jTxtnpfQuantidadeEstoque" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLblnpfCodigo" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLblnpfNome" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTxtnpfCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtnpfNome" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblnpfMarca" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="jLblnpfCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jFmtnpfMarca" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtnpfCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblnpfGenero" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblnpfPrecodeVenda" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTxtnpfGenero" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtnpfQuantidadeEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLblnpfQuantidadeEstoque" min="-2" pref="16" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTxtnpfPrecodeVenda" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="76" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLblnpfCodigo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo/Id"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtnpfCodigo">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblnpfNome">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtnpfNome">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblnpfMarca">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Marca"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtnpfMarca">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblnpfCategoria">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Categoria"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtnpfCategoria">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblnpfGenero">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Genero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtnpfGenero">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblnpfPrecodeVenda">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pre&#xe7;o de Venda"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtnpfPrecodeVenda">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblnpfQuantidadeEstoque">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Quantidade de Estoque"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtnpfQuantidadeEstoque">
+    </Component>
+  </SubComponents>
+</Form>
