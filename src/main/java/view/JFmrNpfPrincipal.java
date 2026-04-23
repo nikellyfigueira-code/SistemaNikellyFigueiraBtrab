@@ -60,16 +60,31 @@ public class JFmrNpfPrincipal extends javax.swing.JFrame {
         jMnunpfClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnunpfClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.png"))); // NOI18N
         jMnunpfClientes.setText("Clientes");
+        jMnunpfClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnunpfClientesActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMnunpfClientes);
 
         jMnunpfFornecedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnunpfFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/gravar.png"))); // NOI18N
         jMnunpfFornecedor.setText("Fornecedores");
+        jMnunpfFornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnunpfFornecedorActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMnunpfFornecedor);
 
         jMnunpfProdutos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnunpfProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto.png"))); // NOI18N
         jMnunpfProdutos.setText("Produtos");
+        jMnunpfProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnunpfProdutosActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMnunpfProdutos);
 
         jMnunpfSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -82,6 +97,11 @@ public class JFmrNpfPrincipal extends javax.swing.JFrame {
         jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit_1.png"))); // NOI18N
         jMenuItem6.setText("Sair");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem6);
 
         jMenuBar1.add(jMenu1);
@@ -128,6 +148,29 @@ public class JFmrNpfPrincipal extends javax.swing.JFrame {
        jDlgNpfUsuarios.setVisible(true);
     }//GEN-LAST:event_jMnunpfUsuariosActionPerformed
 
+    private void jMnunpfClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnunpfClientesActionPerformed
+        // TODO add your handling code here:
+        JDlgNpfClientes jDlgNpfClientes = new JDlgNpfClientes(null, true);
+       jDlgNpfClientes.setVisible(true);
+    }//GEN-LAST:event_jMnunpfClientesActionPerformed
+
+    private void jMnunpfFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnunpfFornecedorActionPerformed
+        // TODO add your handling code here: 
+        JDlgNpfFornecedor jDlgNpfFornecedor = new JDlgNpfFornecedor(null, true);
+       jDlgNpfFornecedor.setVisible(true);
+    }//GEN-LAST:event_jMnunpfFornecedorActionPerformed
+
+    private void jMnunpfProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnunpfProdutosActionPerformed
+        // TODO add your handling code here:
+         JDlgNpfProdutos jDlgNpfProdutos = new JDlgNpfProdutos(null, true);
+       jDlgNpfProdutos.setVisible(true);
+    }//GEN-LAST:event_jMnunpfProdutosActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+         System.exit(0);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -160,6 +203,7 @@ public class JFmrNpfPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JFmrNpfPrincipal().setVisible(true);
+                 System.exit(0);
             }
         });
     }
