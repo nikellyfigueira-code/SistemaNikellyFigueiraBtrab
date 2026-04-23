@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u71831545136
@@ -16,7 +18,36 @@ public class JDlgNpfProdutos extends javax.swing.JDialog {
     public JDlgNpfProdutos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-    }
+    }public void habilitar() {
+    jTxtnpfCodigo.setEnabled(true);
+    jTxtnpfNome.setEnabled(true);
+    jLblnpfMarca.setEnabled(true);
+    jTxtnpfCategoria.setEnabled(true);
+    jTxtnpfGenero.setEnabled(true);
+    jTxtnpfPrecodeVenda.setEnabled(true);
+    jTxtnpfQuantidadeEstoque.setEnabled(true);
+    jBtnnpfConfirmar.setEnabled(true);
+    jBtnnpfCancelar.setEnabled(true);
+    jBtnnpfIncluir1.setEnabled(false);
+    jBtnnpfAlterar.setEnabled(false);
+    jBtnnpfExcluir.setEnabled(false);
+    jBtnnpfPesquisar.setEnabled(false);
+}
+    public void desabilitar() {
+    jTxtnpfCodigo.setEnabled(false);
+    jTxtnpfNome.setEnabled(false);
+    jLblnpfMarca.setEnabled(false);
+    jTxtnpfCategoria.setEnabled(false);
+    jTxtnpfGenero.setEnabled(false);
+    jTxtnpfPrecodeVenda.setEnabled(false);
+    jTxtnpfQuantidadeEstoque.setEnabled(false);
+    jBtnnpfConfirmar.setEnabled(false);
+    jBtnnpfCancelar.setEnabled(false);
+    jBtnnpfIncluir1.setEnabled(true);
+    jBtnnpfAlterar.setEnabled(true);
+    jBtnnpfExcluir.setEnabled(true);
+    jBtnnpfPesquisar.setEnabled(true);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,6 +72,12 @@ public class JDlgNpfProdutos extends javax.swing.JDialog {
         jTxtnpfPrecodeVenda = new javax.swing.JTextField();
         jLblnpfQuantidadeEstoque = new javax.swing.JLabel();
         jTxtnpfQuantidadeEstoque = new javax.swing.JTextField();
+        jBtnnpfIncluir1 = new javax.swing.JButton();
+        jBtnnpfAlterar = new javax.swing.JButton();
+        jBtnnpfExcluir = new javax.swing.JButton();
+        jBtnnpfConfirmar = new javax.swing.JButton();
+        jBtnnpfCancelar = new javax.swing.JButton();
+        jBtnnpfPesquisar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -58,6 +95,54 @@ public class JDlgNpfProdutos extends javax.swing.JDialog {
 
         jLblnpfQuantidadeEstoque.setText("Quantidade de Estoque");
 
+        jBtnnpfIncluir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
+        jBtnnpfIncluir1.setText("Incluir");
+        jBtnnpfIncluir1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfIncluir1ActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar_1.png"))); // NOI18N
+        jBtnnpfAlterar.setText("Alterar");
+        jBtnnpfAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfAlterarActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
+        jBtnnpfExcluir.setText("Excluir");
+        jBtnnpfExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfExcluirActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/gravar.png"))); // NOI18N
+        jBtnnpfConfirmar.setText("Confirmar");
+        jBtnnpfConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfConfirmarActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar_1.png"))); // NOI18N
+        jBtnnpfCancelar.setText("Cancelar");
+        jBtnnpfCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfCancelarActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
+        jBtnnpfPesquisar.setText("Pesquisar");
+        jBtnnpfPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfPesquisarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,7 +150,6 @@ public class JDlgNpfProdutos extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTxtnpfQuantidadeEstoque)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTxtnpfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -77,27 +161,45 @@ public class JDlgNpfProdutos extends javax.swing.JDialog {
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jTxtnpfNome)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLblnpfMarca)
-                        .addGap(180, 180, 180)
-                        .addComponent(jLblnpfGenero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jFmtnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBtnnpfIncluir1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBtnnpfAlterar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTxtnpfGenero))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLblnpfQuantidadeEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-                        .addGap(209, 209, 209))
+                        .addComponent(jBtnnpfExcluir)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBtnnpfConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBtnnpfCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBtnnpfPesquisar)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTxtnpfCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLblnpfCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(24, 24, 24)))
+                                .addGap(122, 122, 122))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jTxtnpfCategoria)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLblnpfPrecodeVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
-                            .addComponent(jTxtnpfPrecodeVenda))))
+                            .addComponent(jFmtnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLblnpfMarca))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLblnpfGenero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(62, 62, 62))
+                            .addComponent(jTxtnpfGenero)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTxtnpfPrecodeVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLblnpfPrecodeVenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLblnpfQuantidadeEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(118, 118, 118))
+                            .addComponent(jTxtnpfQuantidadeEstoque))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -106,35 +208,72 @@ public class JDlgNpfProdutos extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblnpfCodigo)
                     .addComponent(jLblnpfNome))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTxtnpfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTxtnpfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLblnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLblnpfGenero)
-                    .addComponent(jLblnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLblnpfCategoria, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jFmtnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTxtnpfGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTxtnpfCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jFmtnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtnpfGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLblnpfPrecodeVenda)
+                    .addComponent(jLblnpfQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblnpfCategoria)
-                    .addComponent(jLblnpfPrecodeVenda))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jTxtnpfPrecodeVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtnpfQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(74, 74, 74)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtnpfCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtnpfPrecodeVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLblnpfQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTxtnpfQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 44, Short.MAX_VALUE))
+                    .addComponent(jBtnnpfIncluir1)
+                    .addComponent(jBtnnpfAlterar)
+                    .addComponent(jBtnnpfExcluir)
+                    .addComponent(jBtnnpfConfirmar)
+                    .addComponent(jBtnnpfCancelar)
+                    .addComponent(jBtnnpfPesquisar))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnnpfIncluir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfIncluir1ActionPerformed
+        // TODO add your handling code here:
+        habilitar();
+    }//GEN-LAST:event_jBtnnpfIncluir1ActionPerformed
+
+    private void jBtnnpfAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfAlterarActionPerformed
+        // TODO add your handling code here:
+        habilitar();
+    }//GEN-LAST:event_jBtnnpfAlterarActionPerformed
+
+    private void jBtnnpfExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfExcluirActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showConfirmDialog(null, "Confirma Exclusão? ","Selecione uma opção!", JOptionPane.YES_OPTION);
+    }//GEN-LAST:event_jBtnnpfExcluirActionPerformed
+
+    private void jBtnnpfConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfConfirmarActionPerformed
+        // TODO add your handling code here:
+        desabilitar();
+    }//GEN-LAST:event_jBtnnpfConfirmarActionPerformed
+
+    private void jBtnnpfCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfCancelarActionPerformed
+        // TODO add your handling code here:
+        desabilitar();
+    }//GEN-LAST:event_jBtnnpfCancelarActionPerformed
+
+    private void jBtnnpfPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfPesquisarActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showInputDialog(null, "Entre com a chave primária.");
+    }//GEN-LAST:event_jBtnnpfPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,6 +319,12 @@ public class JDlgNpfProdutos extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnnpfAlterar;
+    private javax.swing.JButton jBtnnpfCancelar;
+    private javax.swing.JButton jBtnnpfConfirmar;
+    private javax.swing.JButton jBtnnpfExcluir;
+    private javax.swing.JButton jBtnnpfIncluir1;
+    private javax.swing.JButton jBtnnpfPesquisar;
     private javax.swing.JFormattedTextField jFmtnpfMarca;
     private javax.swing.JLabel jLblnpfCategoria;
     private javax.swing.JLabel jLblnpfCodigo;
