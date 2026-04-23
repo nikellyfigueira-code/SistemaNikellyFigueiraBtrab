@@ -27,17 +27,105 @@ public class JDlgNpfVendedor extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLblnpfCodigo = new javax.swing.JLabel();
+        jTxtnpfCodigo = new javax.swing.JTextField();
+        jLblnpfNome = new javax.swing.JLabel();
+        jTxtnpfNome = new javax.swing.JTextField();
+        jLblnpfMarca = new javax.swing.JLabel();
+        jFmtnpfMarca = new javax.swing.JFormattedTextField();
+        jLblnpfCategoria = new javax.swing.JLabel();
+        jTxtnpfCategoria = new javax.swing.JTextField();
+        jLblnpfGenero = new javax.swing.JLabel();
+        jTxtnpfGenero = new javax.swing.JTextField();
+        jLblnpfPrecodeVenda = new javax.swing.JLabel();
+        jTxtnpfPrecodeVenda = new javax.swing.JTextField();
+        jLblnpfQuantidadeEstoque = new javax.swing.JLabel();
+        jTxtnpfQuantidadeEstoque = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLblnpfCodigo.setText("Código/Id");
+
+        jLblnpfNome.setText("Nome");
+
+        jLblnpfMarca.setText("Marca");
+
+        jLblnpfCategoria.setText("Categoria");
+
+        jLblnpfGenero.setText("Genero");
+
+        jLblnpfPrecodeVenda.setText("Preço de Venda");
+
+        jLblnpfQuantidadeEstoque.setText("Quantidade de Estoque");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jFmtnpfMarca, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTxtnpfCodigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
+                            .addComponent(jLblnpfMarca)
+                            .addComponent(jLblnpfGenero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLblnpfPrecodeVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                                .addGap(44, 44, 44))
+                            .addComponent(jLblnpfCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTxtnpfNome, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                            .addComponent(jTxtnpfCategoria, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addComponent(jLblnpfQuantidadeEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLblnpfCodigo)
+                        .addGap(99, 99, 99)
+                        .addComponent(jLblnpfNome)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jTxtnpfPrecodeVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTxtnpfGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTxtnpfQuantidadeEstoque)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLblnpfCodigo)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLblnpfNome)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTxtnpfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtnpfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLblnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLblnpfCategoria))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jFmtnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtnpfCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLblnpfGenero)
+                    .addComponent(jLblnpfPrecodeVenda))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTxtnpfGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtnpfQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLblnpfQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTxtnpfPrecodeVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 76, Short.MAX_VALUE))
         );
 
         pack();
@@ -86,5 +174,19 @@ public class JDlgNpfVendedor extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFormattedTextField jFmtnpfMarca;
+    private javax.swing.JLabel jLblnpfCategoria;
+    private javax.swing.JLabel jLblnpfCodigo;
+    private javax.swing.JLabel jLblnpfGenero;
+    private javax.swing.JLabel jLblnpfMarca;
+    private javax.swing.JLabel jLblnpfNome;
+    private javax.swing.JLabel jLblnpfPrecodeVenda;
+    private javax.swing.JLabel jLblnpfQuantidadeEstoque;
+    private javax.swing.JTextField jTxtnpfCategoria;
+    private javax.swing.JTextField jTxtnpfCodigo;
+    private javax.swing.JTextField jTxtnpfGenero;
+    private javax.swing.JTextField jTxtnpfNome;
+    private javax.swing.JTextField jTxtnpfPrecodeVenda;
+    private javax.swing.JTextField jTxtnpfQuantidadeEstoque;
     // End of variables declaration//GEN-END:variables
 }
