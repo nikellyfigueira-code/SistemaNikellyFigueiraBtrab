@@ -153,9 +153,9 @@
                   <Component id="jFmtnpfCNPJ" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLblnpfCategoriadeProduto" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLblnpfFormadePagamento" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblnpfCategoriadeProduto" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">

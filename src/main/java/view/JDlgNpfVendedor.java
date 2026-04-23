@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u71831545136
@@ -16,8 +18,36 @@ public class JDlgNpfVendedor extends javax.swing.JDialog {
     public JDlgNpfVendedor(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-    }
-
+    }  public void habilitar() {
+    jTxtnpfCodigo.setEnabled(true);
+    jTxtnpfNome.setEnabled(true);
+    jLblnpfMarca.setEnabled(true);
+    jTxtnpfCategoria.setEnabled(true);
+    jTxtnpfGenero.setEnabled(true);
+    jTxtnpfPrecodeVenda.setEnabled(true);
+    jTxtnpfQuantidadeEstoque.setEnabled(true);
+    jBtnnpfConfirmar.setEnabled(true);
+    jBtnnpfCancelar.setEnabled(true);
+    jBtnnpfIncluir.setEnabled(false);
+    jBtnnpfAlterar.setEnabled(false);
+    jBtnnpfExcluir.setEnabled(false);
+    jBtnnpfPesquisar.setEnabled(false);
+}
+    public void desabilitar() {
+    jTxtnpfCodigo.setEnabled(false);
+    jTxtnpfNome.setEnabled(false);
+    jLblnpfMarca.setEnabled(false);
+    jTxtnpfCategoria.setEnabled(false);
+    jTxtnpfGenero.setEnabled(false);
+    jTxtnpfPrecodeVenda.setEnabled(false);
+    jTxtnpfQuantidadeEstoque.setEnabled(false);
+    jBtnnpfConfirmar.setEnabled(false);
+    jBtnnpfCancelar.setEnabled(false);
+    jBtnnpfIncluir.setEnabled(true);
+    jBtnnpfAlterar.setEnabled(true);
+    jBtnnpfExcluir.setEnabled(true);
+    jBtnnpfPesquisar.setEnabled(true);
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,6 +71,12 @@ public class JDlgNpfVendedor extends javax.swing.JDialog {
         jTxtnpfPrecodeVenda = new javax.swing.JTextField();
         jLblnpfQuantidadeEstoque = new javax.swing.JLabel();
         jTxtnpfQuantidadeEstoque = new javax.swing.JTextField();
+        jBtnnpfIncluir = new javax.swing.JButton();
+        jBtnnpfAlterar = new javax.swing.JButton();
+        jBtnnpfExcluir = new javax.swing.JButton();
+        jBtnnpfConfirmar = new javax.swing.JButton();
+        jBtnnpfCancelar = new javax.swing.JButton();
+        jBtnnpfPesquisar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -58,6 +94,54 @@ public class JDlgNpfVendedor extends javax.swing.JDialog {
 
         jLblnpfQuantidadeEstoque.setText("Quantidade de Estoque");
 
+        jBtnnpfIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
+        jBtnnpfIncluir.setText("Incluir");
+        jBtnnpfIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfIncluirActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar_1.png"))); // NOI18N
+        jBtnnpfAlterar.setText("Alterar");
+        jBtnnpfAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfAlterarActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
+        jBtnnpfExcluir.setText("Excluir");
+        jBtnnpfExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfExcluirActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/gravar.png"))); // NOI18N
+        jBtnnpfConfirmar.setText("Confirmar");
+        jBtnnpfConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfConfirmarActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar_1.png"))); // NOI18N
+        jBtnnpfCancelar.setText("Cancelar");
+        jBtnnpfCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfCancelarActionPerformed(evt);
+            }
+        });
+
+        jBtnnpfPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
+        jBtnnpfPesquisar.setText("Pesquisar");
+        jBtnnpfPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnnpfPesquisarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -67,31 +151,49 @@ public class JDlgNpfVendedor extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jFmtnpfMarca, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTxtnpfCodigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
-                            .addComponent(jLblnpfMarca)
-                            .addComponent(jLblnpfGenero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLblnpfPrecodeVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                                .addGap(44, 44, 44))
-                            .addComponent(jLblnpfCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTxtnpfNome, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                            .addComponent(jTxtnpfCategoria, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addComponent(jLblnpfQuantidadeEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                                .addComponent(jLblnpfQuantidadeEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(114, 114, 114))
+                            .addComponent(jTxtnpfPrecodeVenda)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jFmtnpfMarca, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jTxtnpfCodigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
+                                    .addComponent(jLblnpfMarca))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLblnpfCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTxtnpfCategoria)
+                                    .addComponent(jTxtnpfNome)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLblnpfGenero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(56, 56, 56)
+                                .addComponent(jLblnpfPrecodeVenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(360, 360, 360))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTxtnpfGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTxtnpfQuantidadeEstoque)
+                                .addGap(35, 35, 35)))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLblnpfCodigo)
-                        .addGap(99, 99, 99)
+                        .addGap(91, 91, 91)
                         .addComponent(jLblnpfNome)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jTxtnpfPrecodeVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTxtnpfGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBtnnpfIncluir)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBtnnpfAlterar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTxtnpfQuantidadeEstoque)))
-                .addContainerGap())
+                        .addComponent(jBtnnpfExcluir)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBtnnpfConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBtnnpfCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(jBtnnpfPesquisar))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,15 +207,15 @@ public class JDlgNpfVendedor extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTxtnpfCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTxtnpfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblnpfCategoria))
+                    .addComponent(jLblnpfMarca)
+                    .addComponent(jLblnpfCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jFmtnpfMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTxtnpfCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblnpfGenero)
                     .addComponent(jLblnpfPrecodeVenda))
@@ -125,11 +227,49 @@ public class JDlgNpfVendedor extends javax.swing.JDialog {
                 .addComponent(jLblnpfQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTxtnpfPrecodeVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBtnnpfIncluir)
+                    .addComponent(jBtnnpfAlterar)
+                    .addComponent(jBtnnpfExcluir)
+                    .addComponent(jBtnnpfConfirmar)
+                    .addComponent(jBtnnpfCancelar)
+                    .addComponent(jBtnnpfPesquisar))
+                .addGap(16, 16, 16))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnnpfIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfIncluirActionPerformed
+        // TODO add your handling code here:
+        habilitar();
+    }//GEN-LAST:event_jBtnnpfIncluirActionPerformed
+
+    private void jBtnnpfAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfAlterarActionPerformed
+        // TODO add your handling code here:
+        habilitar();
+    }//GEN-LAST:event_jBtnnpfAlterarActionPerformed
+
+    private void jBtnnpfExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfExcluirActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showConfirmDialog(null, "Confirma Exclusão? ","Selecione uma opção!", JOptionPane.YES_OPTION);
+    }//GEN-LAST:event_jBtnnpfExcluirActionPerformed
+
+    private void jBtnnpfConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfConfirmarActionPerformed
+        // TODO add your handling code here:
+        desabilitar();
+    }//GEN-LAST:event_jBtnnpfConfirmarActionPerformed
+
+    private void jBtnnpfCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfCancelarActionPerformed
+        // TODO add your handling code here:
+        desabilitar();
+    }//GEN-LAST:event_jBtnnpfCancelarActionPerformed
+
+    private void jBtnnpfPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnnpfPesquisarActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showInputDialog(null, "Entre com a chave primária.");
+    }//GEN-LAST:event_jBtnnpfPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,6 +314,12 @@ public class JDlgNpfVendedor extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnnpfAlterar;
+    private javax.swing.JButton jBtnnpfCancelar;
+    private javax.swing.JButton jBtnnpfConfirmar;
+    private javax.swing.JButton jBtnnpfExcluir;
+    private javax.swing.JButton jBtnnpfIncluir;
+    private javax.swing.JButton jBtnnpfPesquisar;
     private javax.swing.JFormattedTextField jFmtnpfMarca;
     private javax.swing.JLabel jLblnpfCategoria;
     private javax.swing.JLabel jLblnpfCodigo;
