@@ -8,6 +8,6 @@ package dao;
  *
  * @author u71831545136
  */
-public class DaoAbstract {
-    
+public abstract class DaoAbstract {
+    public abstract void insert(Object object);
 }
