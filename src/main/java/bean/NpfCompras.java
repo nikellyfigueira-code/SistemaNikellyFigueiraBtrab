@@ -15,7 +15,7 @@ public class NpfCompras {
     private Date npfData_Compra;
     private int npfFornecedor;
     private String npfUsuario;
-    private double npftotal;
+    private Double npfTotal;
 
     /**
      * @return the npfIdCompras
@@ -77,14 +77,14 @@ public class NpfCompras {
      * @return the npftotal
      */
     public double getNpftotal() {
-        return npftotal;
+        return npfTotal;
     }
 
     /**
      * @param npftotal the npftotal to set
      */
     public void setNpftotal(double npftotal) {
-        this.npftotal = npftotal;
+        this.npfTotal = npftotal;
     }
     
 }

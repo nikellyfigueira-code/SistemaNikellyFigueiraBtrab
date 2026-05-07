@@ -43,8 +43,8 @@ public class DaoNpfCompras extends DaoAbstract {
             pst.setInt(1, npfCompras.getNpfIdCompras());
             pst.setDate(2, null);
             pst.setInt(3, npfCompras.getNpfFornecedor());
-            pst.setInt(4, npfCompras.getNpfUsuario());
-            pst.setDouble(5, npfCompras.getNpfTotal());
+            pst.setString(4, npfCompras.getNpfUsuario());
+            pst.setDouble(5, npfCompras.getNpftotal());
             
 
             pst.executeUpdate();
