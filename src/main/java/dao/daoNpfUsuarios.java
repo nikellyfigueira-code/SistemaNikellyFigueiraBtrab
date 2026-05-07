@@ -17,7 +17,7 @@ import teste.JdbcCrud;
  * @author u71831545136
  */
  
-public class DaoNpfUsuarios extends DaoAbstract {
+public class daoNpfUsuarios extends DaoAbstract {
     
     @Override
     public void insert(Object object) {
@@ -50,7 +50,7 @@ public class DaoNpfUsuarios extends DaoAbstract {
     }
 
     
-    
+
 
     @Override
     public Object list(int id) {

@@ -10,4 +10,6 @@ package dao;
  */
 public abstract class DaoAbstract {
     public abstract void insert(Object object);
+    public abstract Object list(int id);
+    public abstract Object listAll();
 }

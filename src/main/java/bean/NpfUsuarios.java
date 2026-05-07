@@ -10,7 +10,15 @@ import java.util.Date;
  * @author u71831545136
  */
 public class NpfUsuarios {
-
+    private int npfIdUsuarios;
+    private String npfNome;
+    private String npfApelido;
+    private String npfCpf;
+    private Date npfDataNascimento;
+    private String npfSenha;
+    private int npfNivel;
+    private String npfAtivo;
+    
     /**
      * @return the npfIdUsuarios
      */
@@ -123,13 +131,6 @@ public class NpfUsuarios {
         this.npfAtivo = npfAtivo;
     }
    
-    private int npfIdUsuarios;
-    private String npfNome;
-    private String npfApelido;
-    private String npfCpf;
-    private Date npfDataNascimento;
-    private String npfSenha;
-    private int npfNivel;
-    private String npfAtivo;
+   
 
 }
