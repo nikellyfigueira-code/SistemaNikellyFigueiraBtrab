@@ -17,5 +17,52 @@ import teste.JdbcCrud;
  * @author u71831545136
  */
 public class daoNpfCompras_Produtos  extends DaoAbstract{
-    
+@Override
+    public void insert(Object object) {
+        
+        NpfCompras_Produtos npfComprasProdutos = (NpfCompras_Produtos) object;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url, user, password;
+            url = "jdbc:mysql://10.7.0.51:33062/db_nikelly_figueira_IFMS";
+            user = "nikelly_figueira";
+            password = "nikelly_figueira";
+            Connection cnt;
+            cnt = DriverManager.getConnection(url, user, password);
+            String sql = "insert into npf_compras_produtos values (?,?,?,?,?)";
+
+            PreparedStatement pst = cnt.prepareStatement(sql);
+            pst.setInt(1, npfComprasProdutos.getNpfIdCompras_Produto());
+            pst.setInt(2, npfComprasProdutos.getNpfCompra());
+            pst.setInt(3, npfComprasProdutos.getNpfProduto());
+            pst.setInt(4, npfComprasProdutos.getNpfQuantidade());
+            pst.setDouble(5, npfComprasProdutos.getNpfPreco());
+
+            pst.executeUpdate();
+
+        } catch (ClassNotFoundException ex) {
+
+            Logger.getLogger(JdbcCrud.class.getName()).log(Level.SEVERE, null, ex);
+
+        } catch (SQLException ex) {
+
+            Logger.getLogger(JdbcCrud.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+    }
+
+    @Override
+    public Object list(int id) {
+
+        return null;
+
+    }
+
+    @Override
+    public Object listAll() {
+
+        return null;
+
+    }
 }

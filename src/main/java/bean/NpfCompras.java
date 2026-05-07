@@ -11,38 +11,39 @@ import java.util.Date;
  * @author u71831545136
  */
 public class NpfCompras {
-    private int npfIdCompras;
-    private Date npfData_Compra;
+    
+    private int npfIdCompra;
+    private Date npfDataCompra;
     private int npfFornecedor;
-    private String npfUsuario;
-    private Double npfTotal;
+    private int npfUsuario;
+    private double npfTotal;
 
     /**
-     * @return the npfIdCompras
+     * @return the npfIdCompra
      */
-    public int getNpfIdCompras() {
-        return npfIdCompras;
+    public int getNpfIdCompra() {
+        return npfIdCompra;
     }
 
     /**
-     * @param npfIdCompras the npfIdCompras to set
+     * @param npfIdCompra the npfIdCompra to set
      */
-    public void setNpfIdCompras(int npfIdCompras) {
-        this.npfIdCompras = npfIdCompras;
+    public void setNpfIdCompra(int npfIdCompra) {
+        this.npfIdCompra = npfIdCompra;
     }
 
     /**
-     * @return the npfData_Compra
+     * @return the npfDataCompra
      */
-    public Date getNpfData_Compra() {
-        return npfData_Compra;
+    public Date getNpfDataCompra() {
+        return npfDataCompra;
     }
 
     /**
-     * @param npfData_Compra the npfData_Compra to set
+     * @param npfDataCompra the npfDataCompra to set
      */
-    public void setNpfData_Compra(Date npfData_Compra) {
-        this.npfData_Compra = npfData_Compra;
+    public void setNpfDataCompra(Date npfDataCompra) {
+        this.npfDataCompra = npfDataCompra;
     }
 
     /**
@@ -62,29 +63,28 @@ public class NpfCompras {
     /**
      * @return the npfUsuario
      */
-    public String getNpfUsuario() {
+    public int getNpfUsuario() {
         return npfUsuario;
     }
 
     /**
      * @param npfUsuario the npfUsuario to set
      */
-    public void setNpfUsuario(String npfUsuario) {
+    public void setNpfUsuario(int npfUsuario) {
         this.npfUsuario = npfUsuario;
     }
 
     /**
-     * @return the npftotal
+     * @return the npfTotal
      */
-    public double getNpftotal() {
+    public double getNpfTotal() {
         return npfTotal;
     }
 
     /**
-     * @param npftotal the npftotal to set
+     * @param npfTotal the npfTotal to set
      */
-    public void setNpftotal(double npftotal) {
-        this.npfTotal = npftotal;
+    public void setNpfTotal(double npfTotal) {
+        this.npfTotal = npfTotal;
     }
-    
 }

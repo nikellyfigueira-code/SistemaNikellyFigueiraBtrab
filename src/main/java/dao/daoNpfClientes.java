@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package dao;
-
 import bean.NpfClientes;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,8 +16,8 @@ import teste.JdbcCrud;
  *
  * @author u71831545136
  */
-public class DaoNpfClientes extends DaoAbstract {
-     @Override
+public class daoNpfClientes extends DaoAbstract{
+   @Override
     public void insert(Object object) {
 
         NpfClientes npfClientes = (NpfClientes) object;
@@ -83,4 +82,5 @@ public class DaoNpfClientes extends DaoAbstract {
         return null;
 
     }
-}
+} 
+
